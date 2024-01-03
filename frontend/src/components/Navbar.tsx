@@ -3,27 +3,27 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-end my-2">
+    <nav className="grid grid-cols-1 sm:flex sm:justify-end my-2">
       <Link
-        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline"
-        href="#targetHome"
+        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline text-center"
+        href="#targetAbout"
       >
-        Inicio
+        Sobre mi
       </Link>
       <Link
-        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline"
+        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline text-center"
         href="#targetTech"
       >
         Tecnologías
       </Link>
       <Link
-        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline"
+        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline text-center"
         href="#targetProjects"
       >
         Proyectos
       </Link>
       <Link
-        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline"
+        className="text-custom-brown-5 text-2xl uppercase mx-8 hover:underline text-center"
         href="#targetContact"
       >
         Contacto

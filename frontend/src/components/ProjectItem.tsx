@@ -15,7 +15,7 @@ const ProjectItem = () => {
           width={1000}
           height={0}
           alt=""
-          className="object-cover transition-transform duration-500 group-hover:scale-125"
+          className="object-cover transition-transform duration-500 group-hover:scale-125 rounded-sm"
         />
         <ul className="grid grid-cols-5 gap-2 mt-2">
           <li className="bg-custom-brown-4 text-custom-brown-1 rounded-md text-center text-lg">

@@ -36,7 +36,9 @@ const About = () => {
         </Window>
       </div>
       <div id="targetAbout" className="mx-2 md:mx-14">
-        <h1 className="text-center text-4xl text-custom-brown-5">Sobre mi</h1>
+        <h1 className="text-center text-4xl text-custom-brown-5 uppercase">
+          Sobre mi
+        </h1>
         <div className="xl:flex xl:justify-around">
           <p className="text-justify text-xl md:text-2xl my-auto md:mx-6 2xl:mx-32">
             ¡Hola! Soy Luis, un apasionado de la tecnología y la programación.

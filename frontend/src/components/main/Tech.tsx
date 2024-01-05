@@ -3,7 +3,7 @@ import TechItem from "../TechItem";
 
 const Tech = () => {
   return (
-    <div className="bg-custom-brown-3 mt-6 py-2">
+    <div id="targetTech" className="bg-custom-brown-3 mt-6 py-2">
       <h1 className="text-center text-4xl text-custom-brown-5 uppercase">
         Tecnologías
       </h1>

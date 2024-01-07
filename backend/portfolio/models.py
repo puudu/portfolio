@@ -7,6 +7,10 @@ class Technology(models.Model):
     position = models.PositiveIntegerField()
     hide = models.BooleanField()
     
+    def delete(self, *args, **kwargs):
+        self.image.delete()
+        super().delete(*args, **kwargs)
+
     def __str__(self):
         return "#"+ str(self.position) +" " + self.name
     
@@ -21,6 +25,10 @@ class Project(models.Model):
     position = models.PositiveIntegerField()
     hide = models.BooleanField()
 
+    def delete(self, *args, **kwargs):
+        self.screenshot.delete()
+        super().delete(*args, **kwargs)
+
     def __str__(self):
         return "#"+ str(self.position) +" " + self.title
 
@@ -31,3 +39,7 @@ class About(models.Model):
     email = models.EmailField()
     url_github = models.URLField()
     url_linkedin = models.URLField()
+
+    def delete(self, *args, **kwargs):
+        self.image.delete()
+        super().delete(*args, **kwargs)

@@ -12,13 +12,13 @@ from .serializers import ProjectSerializer, TechnologySerializer, AboutSerialize
 
 @api_view(['GET'])
 def get_projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().filter(hide=False).order_by("position")
     serializer = ProjectSerializer(projects, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def get_technologies(request):
-    technologies = Technology.objects.all()
+    technologies = Technology.objects.all().filter(hide=False).order_by("position")
     serializer = TechnologySerializer(technologies, many=True)
     return Response(serializer.data)
 

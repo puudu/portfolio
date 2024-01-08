@@ -3,7 +3,14 @@ import Window from "../Window";
 import Link from "next/link";
 import Image from "next/image";
 
-const About = () => {
+export default async function About() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-about/`,
+    {
+      cache: "no-store",
+    }
+  );
+  const data = await res.json();
   return (
     <>
       <div className="mx-2 md:mx-20 my-6">
@@ -12,7 +19,7 @@ const About = () => {
             <div className="text-2xl flex text-custom-brown-5">
               <h4>Hola, soy</h4>
               <h4 className="bg-custom-brown-5 text-custom-brown-1 ml-2 px-2">
-                Luis Donoso
+                {data.name}
               </h4>
             </div>
             <h1 className="text-2xl md:text-4xl text-custom-brown-5">
@@ -41,21 +48,11 @@ const About = () => {
         </h1>
         <div className="xl:flex xl:justify-around">
           <p className="text-justify text-xl md:text-2xl my-auto md:mx-6 2xl:mx-32">
-            ¡Hola! Soy Luis, un apasionado de la tecnología y la programación.
-            Mi viaje comenzó con la creación de videojuegos en Unity como hobby,
-            lo que me inspiró a seguir estudiando en la carrera de Analista
-            Programador, donde adquirí conocimientos fundamentales en
-            programación, diseño web y desarrollo de software. Actualmente, sigo
-            profundizando en mis estudios de manera independiente, explorando
-            diversas tecnologías relacionadas con el mundo web. Con una sólida
-            base académica y una actitud de aprendizaje constante, estoy
-            emocionado por aplicar mis habilidades en proyectos desafiantes y
-            colaborar en nuevas oportunidades que me permitan seguir creciendo
-            en este campo.
+            {data.about_me}
           </p>
           <Image
             className="mx-auto 2xl:mx-16"
-            src="/img/temp/capy.jpg"
+            src={process.env.NEXT_PUBLIC_BACKEND_DOMAIN + data.image}
             width={400}
             height={400}
             alt=""
@@ -64,6 +61,4 @@ const About = () => {
       </div>
     </>
   );
-};
-
-export default About;
+}

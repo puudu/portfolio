@@ -5,7 +5,7 @@ export default async function Tech() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-technologies/`,
     {
-      cache: "force-cache",
+      cache: "no-store",
     }
   );
   const data = await res.json();

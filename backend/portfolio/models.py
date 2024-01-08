@@ -19,9 +19,9 @@ class Project(models.Model):
     description = models.TextField()
     screenshot = models.ImageField(null=False, upload_to='screenshots')
     technologies = models.ManyToManyField(Technology)
-    url_github = models.URLField()
-    url_deploy = models.URLField()
-    url_playstore = models.URLField()
+    url_github = models.URLField(null=True, blank=True)
+    url_deploy = models.URLField(null=True, blank=True)
+    url_playstore = models.URLField(null=True, blank=True)
     position = models.PositiveIntegerField()
     hide = models.BooleanField()
 

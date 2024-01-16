@@ -2,15 +2,21 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import RedirectButtom from "../RedirectButtom";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { promises as fs } from "fs";
 
 export default async function Contact() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-about/`,
-    {
-      cache: "no-store",
-    }
+  // const res = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-about/`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
+  // const data = await res.json();
+  const file = await fs.readFile(
+    process.cwd() + "/src/data/data.json",
+    "utf-8"
   );
-  const data = await res.json();
+  const data = JSON.parse(file);
 
   return (
     <div id="targetContact" className="bg-custom-brown-3 mt-6 py-2">

@@ -1,0 +1,79 @@
+{
+  "name": "Luis Donoso",
+  "about_me": "¡Hola! Soy Luis, un apasionado de la tecnología y la programación. Mi viaje comenzó con la creación de videojuegos en Unity como hobby, lo que me inspiró a seguir estudiando en la carrera de Analista Programador, donde adquirí conocimientos fundamentales en programación, diseño web y desarrollo de software. Actualmente, sigo profundizando en mis estudios de manera independiente, explorando diversas tecnologías relacionadas con el mundo web. Con una sólida base académica y una actitud de aprendizaje constante, estoy emocionado por aplicar mis habilidades en proyectos desafiantes y colaborar en nuevas oportunidades que me permitan seguir creciendo en este campo.",
+  "image_path": "/img/temp/capy.jpg",
+  "email": "luisdonosoaceiton@gmail.com",
+  "url_github": "https://github.com/puudu",
+  "url_linkedin": "https://cl.linkedin.com/",
+  "technologies": [
+    {
+      "name": "JavaScript",
+      "image_path": "/img/technologies/JavaScript.png"
+    },
+    {
+      "name": "TypeScript",
+      "image_path": "/img/technologies/typescript.png"
+    },
+    {
+      "name": "Python",
+      "image_path": "/img/technologies/python.png"
+    },
+    {
+      "name": "C#",
+      "image_path": "/img/technologies/c-4.webp"
+    },
+    {
+      "name": "Django",
+      "image_path": "/img/technologies/django.webp"
+    },
+    {
+      "name": "ReactJS",
+      "image_path": "/img/technologies/react.png"
+    },
+    {
+      "name": "NextJS",
+      "image_path": "/img/technologies/Next.png"
+    },
+    {
+      "name": "TailwindCSS",
+      "image_path": "/img/technologies/tailwind.png"
+    },
+    {
+      "name": "MongoDB",
+      "image_path": "/img/technologies/mongodb.png"
+    },
+    {
+      "name": "Sass",
+      "image_path": "/img/technologies/sass.png"
+    },
+    {
+      "name": "MySQL",
+      "image_path": "/img/technologies/mysql.png"
+    },
+    {
+      "name": "MongoDB",
+      "image_path": "/img/technologies/mongodb.png"
+    },
+    {
+      "name": "Unity",
+      "image_path": "/img/technologies/unity.png"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Wallpapers App",
+      "description": "Aplicación web diseñada para descargar y compartir fondos de pantalla.",
+      "screenshot_path": "/img/screenshots/wallpapers.png",
+      "technologies": [
+        "Javascript",
+        "Python",
+        "Django",
+        "MySQL",
+        "TailwindCSS"
+      ],
+      "url_github": "https://github.com/puudu/django-wallpapers",
+      "url_deploy": "",
+      "url_playstore": ""
+    }
+  ]
+}

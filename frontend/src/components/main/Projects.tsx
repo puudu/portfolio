@@ -1,14 +1,20 @@
 import React from "react";
 import ProjectItem from "../ProjectItem";
+import { promises as fs } from "fs";
 
 export default async function Projects() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-projects/`,
-    {
-      cache: "no-store",
-    }
+  // const res = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-projects/`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
+  // const data = await res.json();
+  const file = await fs.readFile(
+    process.cwd() + "/src/data/data.json",
+    "utf-8"
   );
-  const data = await res.json();
+  const data = JSON.parse(file);
 
   if (!data) {
     return (
@@ -21,12 +27,12 @@ export default async function Projects() {
         Proyectos
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 mx-2 md:mx-16">
-        {data.map(
+        {data.projects.map(
           (project: {
             id: number;
             title: string;
             description: string;
-            screenshot: string;
+            screenshot_path: string;
             technologies: string[];
             url_github: string;
             url_deploy: string;
@@ -36,9 +42,7 @@ export default async function Projects() {
               key={project.id}
               title={project.title}
               description={project.description}
-              screenshotUrl={
-                process.env.NEXT_PUBLIC_BACKEND_DOMAIN + project.screenshot
-              }
+              screenshotPath={project.screenshot_path}
               techs={project.technologies}
               gitHubUrl={project.url_github}
               deployUrl={project.url_deploy}

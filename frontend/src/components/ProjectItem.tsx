@@ -9,7 +9,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 interface Props {
   title: string;
   description: string;
-  screenshotUrl: string;
+  screenshotPath: string;
   techs: string[];
   gitHubUrl: string | null;
   deployUrl: string | null;
@@ -19,7 +19,7 @@ interface Props {
 const ProjectItem = ({
   title,
   description,
-  screenshotUrl,
+  screenshotPath,
   techs,
   gitHubUrl,
   deployUrl,
@@ -29,7 +29,7 @@ const ProjectItem = ({
     <Window title={title}>
       <div className="p-2">
         <Image
-          src={screenshotUrl}
+          src={screenshotPath}
           width={1000}
           height={0}
           alt={title}
@@ -47,7 +47,7 @@ const ProjectItem = ({
         </ul>
         <p className="text-lg">{description}</p>
         <div className="flex justify-end mt-12">
-          {playStoreUrl != null && (
+          {playStoreUrl != "" && playStoreUrl != null && (
             <RedirectButtom
               className="ml-2 transition-all duration-200"
               title="Play Store"
@@ -55,7 +55,7 @@ const ProjectItem = ({
               url={playStoreUrl}
             />
           )}
-          {deployUrl != null && (
+          {deployUrl != "" && deployUrl != null && (
             <RedirectButtom
               className="ml-2 transition-all duration-200"
               title="Despliegue"
@@ -63,10 +63,10 @@ const ProjectItem = ({
               url={deployUrl}
             />
           )}
-          {gitHubUrl != null && (
+          {gitHubUrl != "" && gitHubUrl != null && (
             <RedirectButtom
               className="ml-2 transition-all duration-200"
-              title="GitHub"
+              title="Repositorio"
               icon={faGithub}
               url={gitHubUrl}
             />

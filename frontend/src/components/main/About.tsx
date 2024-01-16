@@ -2,15 +2,22 @@ import React from "react";
 import Window from "../Window";
 import Link from "next/link";
 import Image from "next/image";
+import { promises as fs } from "fs";
 
 export default async function About() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-about/`,
-    {
-      cache: "no-store",
-    }
+  // const res = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-about/`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
+  // const data = await res.json();
+  const file = await fs.readFile(
+    process.cwd() + "/src/data/data.json",
+    "utf-8"
   );
-  const data = await res.json();
+  const data = JSON.parse(file);
+
   return (
     <>
       <div className="mx-2 md:mx-20 my-6">
@@ -52,7 +59,7 @@ export default async function About() {
           </p>
           <Image
             className="mx-auto 2xl:mx-16"
-            src={process.env.NEXT_PUBLIC_BACKEND_DOMAIN + data.image}
+            src={data.image_path}
             width={400}
             height={400}
             alt=""

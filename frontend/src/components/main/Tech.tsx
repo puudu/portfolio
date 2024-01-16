@@ -1,14 +1,20 @@
 import React from "react";
 import TechItem from "../TechItem";
+import { promises as fs } from "fs";
 
 export default async function Tech() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-technologies/`,
-    {
-      cache: "no-store",
-    }
+  // const res = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BACKEND_DOMAIN}/api/get-technologies/`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
+  // const data = await res.json();
+  const file = await fs.readFile(
+    process.cwd() + "/src/data/data.json",
+    "utf-8"
   );
-  const data = await res.json();
+  const data = JSON.parse(file);
 
   if (!data) {
     return (
@@ -22,14 +28,16 @@ export default async function Tech() {
         Tecnologías
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 mx-4 md:mx-28 mt-2">
-        {data.map((tech: { id: number; name: string; image: string }) => (
-          <TechItem
-            key={tech.id}
-            name={tech.name}
-            imgUrl={process.env.NEXT_PUBLIC_BACKEND_DOMAIN + tech.image}
-            imgAlt={tech.name}
-          />
-        ))}
+        {data.technologies.map(
+          (tech: { name: string; image_path: string }, index: number) => (
+            <TechItem
+              key={index}
+              name={tech.name}
+              imgUrl={tech.image_path}
+              imgAlt={tech.name}
+            />
+          )
+        )}
       </div>
     </div>
   );

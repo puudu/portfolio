@@ -26,7 +26,7 @@ const ProjectItem = ({
   playStoreUrl,
 }: Props) => {
   return (
-    <Window title={title}>
+    <Window title={title} className="">
       <div className="p-2">
         <Image
           src={screenshotPath}
@@ -35,18 +35,21 @@ const ProjectItem = ({
           alt={title}
           className="object-cover transition-transform duration-500 group-hover:scale-125 rounded-sm"
         />
-        <ul className="grid grid-cols-5 gap-2 mt-2">
-          {techs.map((tech) => (
-            <li
-              key={techs.indexOf(tech)}
-              className="bg-custom-brown-4 text-custom-brown-1 rounded-md text-center text-lg"
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
-        <p className="text-lg">{description}</p>
-        <div className="flex justify-end mt-12">
+        <div className="h-56">
+          <ul className="grid grid-cols-5 gap-2 mt-2">
+            {techs.map((tech, index) => (
+              <li
+                key={index}
+                className="bg-custom-brown-4 text-custom-brown-1 rounded-md text-center text-lg"
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+          <p className="text-lg ">{description}</p>
+        </div>
+
+        <div className="flex justify-end self-end">
           {playStoreUrl != "" && playStoreUrl != null && (
             <RedirectButtom
               className="ml-2 transition-all duration-200"

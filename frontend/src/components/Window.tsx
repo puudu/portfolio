@@ -5,10 +5,11 @@ import WindowTopButton from "./WindowTopButton";
 
 type Props = {
   title: string;
+  className: string;
   children: ReactNode; // ReactNode permite cualquier contenido React válido
 };
 
-const Window = ({ title, children }: Props) => {
+const Window = ({ title, className, children }: Props) => {
   return (
     <div className="border-3 border-custom-brown-4 rounded-lg">
       <div className="bg-custom-brown-2 rounded-t-lg border-custom-brown-4 border-b-3">
@@ -21,7 +22,7 @@ const Window = ({ title, children }: Props) => {
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      <div className={className}>{children}</div>
     </div>
   );
 };

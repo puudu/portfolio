@@ -39,8 +39,8 @@
       "image_path": "/img/technologies/tailwind.png"
     },
     {
-      "name": "MongoDB",
-      "image_path": "/img/technologies/mongodb.png"
+      "name": "Bootstrap",
+      "image_path": "/img/technologies/bootstrap.png"
     },
     {
       "name": "Sass",
@@ -62,16 +62,100 @@
   "projects": [
     {
       "title": "Wallpapers App",
-      "description": "Aplicación web diseñada para descargar y compartir fondos de pantalla.",
+      "description": "Aplicación web diseñada para descargar y compartir fondos de pantalla. Explora una amplia variedad de fondos de pantalla con listas paginadas, utilizando diversos filtros, categorías, tipos de pantalla y opciones de orden. Los usuarios pueden crear una cuenta con tal de enviar sus aportes, los nuevos aportes deben ser aprobados por un administrador del sitio.",
       "screenshot_path": "/img/screenshots/wallpapers.png",
+      "technologies": ["Javascript", "Python", "Django", "MySQL", "Tailwind"],
+      "url_github": "https://github.com/puudu/django-wallpapers",
+      "url_deploy": "",
+      "url_playstore": ""
+    },
+    {
+      "title": "Portafolio",
+      "description": "Sitio web donde destaco los stacks tecnológicos que domino, exhibo mis proyectos personales y comparto mi información de contacto.",
+      "screenshot_path": "/img/screenshots/portfolio.png",
       "technologies": [
-        "Javascript",
+        "ReactJS",
+        "NextJS",
+        "Tailwind",
+        "JavaScript",
+        "TypeScript",
         "Python",
         "Django",
-        "MySQL",
-        "TailwindCSS"
+        "MySQL"
       ],
-      "url_github": "https://github.com/puudu/django-wallpapers",
+      "url_github": "https://github.com/puudu/portfolio",
+      "url_deploy": "",
+      "url_playstore": ""
+    },
+    {
+      "title": "Elemental Queens (Web Card Minigame)",
+      "description": "Juego de cartas original desarrollado en React utilizando Vite. El juego cuenta con un tablero principal junto con un registro (Log) que te permite seguir todas las acciones ocurridas durante la partida.",
+      "screenshot_path": "/img/screenshots/cardgame.png",
+      "technologies": ["ReactJS", "VITE", "Tailwind"],
+      "url_github": "https://github.com/puudu/react-vite-cardgame",
+      "url_deploy": "https://stunning-beijinho-0b19f2.netlify.app/",
+      "url_playstore": ""
+    },
+    {
+      "title": "Carrito de compras PudúPizza",
+      "description": "Página de carrito de compras para una tienda de pizzas. Aplicación interactiva hecha con JavaScript utilizando LocalStorage.",
+      "screenshot_path": "/img/screenshots/pudupizza.png",
+      "technologies": ["JavaScript", "Bootstrap", "Sass"],
+      "url_github": "https://github.com/puudu/pudupizza",
+      "url_deploy": "https://pudupizza.netlify.app/",
+      "url_playstore": ""
+    },
+    {
+      "title": "Locura Achocolatada",
+      "description": "Desarrollo de una plataforma web de productos en Django para un cliente real, centrada en la presentación de la gama de chocolates de una tienda. Incluye funcionalidad de comunicación directa a través de WhatsApp con el vendedor.",
+      "screenshot_path": "/img/screenshots/choco.png",
+      "technologies": ["Javascript", "Python", "Django", "MySQL", "Tailwind"],
+      "url_github": "https://github.com/puudu/django-locuraachocolatada",
+      "url_deploy": "",
+      "url_playstore": ""
+    },
+    {
+      "title": "Web Ducktracio",
+      "description": "Landing page hecho con React y Next JS, en donde presento mis videojuegos creados con el motor Unity.",
+      "screenshot_path": "/img/screenshots/ducktracio.png",
+      "technologies": ["ReactJS", "NextJS", "Tailwind"],
+      "url_github": "https://github.com/puudu/ducktracio-web-react",
+      "url_deploy": "https://ducktracio.vercel.app/",
+      "url_playstore": ""
+    },
+    {
+      "title": "Web de Comunidades (en desarrollo)",
+      "description": "Plataforma web de comunidades implementada con Next.js y Django, aprovechando la potencia de su REST API. Esta aplicación permite a los usuarios participar en diversas comunidades al facilitar la creación de publicaciones, la exploración de contenido generado por otros usuarios, y la conexión con comunidades de interés compartido.",
+      "screenshot_path": "/img/screenshots/community.png",
+      "technologies": [
+        "ReactJS",
+        "NextJS",
+        "TypeScript",
+        "Tailwind",
+        "Python",
+        "Django",
+        "REST API",
+        "MySQL"
+      ],
+      "url_github": "https://github.com/puudu/django-communities-posts",
+      "url_deploy": "",
+      "url_playstore": ""
+    },
+    {
+      "title": "Listado trabajadores",
+      "description": "La aplicación de gestión de recursos humanos permite a los usuarios iniciar sesión, listar, registrar y modificar trabajadores. El registro asigna automáticamente privilegios según el cargo. Los administradores y jefes de RR.HH. tienen acceso total, mientras que el personal de RR.HH. tiene funciones específicas y los trabajadores cuentan con acceso parcial. La aplicación registra las acciones realizadas y ofrece opciones para modificar información y contraseñas.",
+      "screenshot_path": "/img/screenshots/trabajadores.png",
+      "technologies": ["Python", "Tkinter", "MySQL"],
+      "url_github": "https://github.com/puudu/python-listado-trabajadores",
+      "url_deploy": "",
+      "url_playstore": ""
+    },
+    {
+      "title": "Task Manager App",
+      "description": "Aplicación de Android, desarrollada en Java utilizando Android Studio, es un simple CRUD (Crear, Leer, Actualizar, Eliminar) de tareas, respaldado por Firebase como base de datos en la nube. La aplicación permite a los usuarios gestionar sus tareas y mantener un seguimiento de sus actividades diarias.",
+      "screenshot_path": "/img/screenshots/lista_tareas_android.png",
+      "technologies": ["Android", "Java", "Firebase"],
+      "url_github": "https://github.com/puudu/portfolio",
       "url_deploy": "",
       "url_playstore": ""
     }

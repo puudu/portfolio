@@ -158,6 +158,24 @@
       "url_github": "https://github.com/puudu/portfolio",
       "url_deploy": "",
       "url_playstore": ""
+    },
+    {
+      "title": "Thread Curse (Videojuego)",
+      "description": "Thread Curse es un juego arcade con gráficos estilo pixel-art, en donde controlas a dos personajes y el hilo que les une. Ten cuidado con los peligros y derrota a los enemigos que se presentan en cada oleada. Juego para Windows, Linux y Android.",
+      "screenshot_path": "/img/screenshots/game_tc.png",
+      "technologies": ["Unity", "C#"],
+      "url_github": "",
+      "url_deploy": "",
+      "url_playstore": "https://play.google.com/store/apps/details?id=com.Ducktracio.SleepingFlowersThreadCurse"
+    },
+    {
+      "title": "Ricochet Girls (Videojuego)",
+      "description": "Ricochet Girls, un juego que combina diversión casual con acción arcade y un toque de roguelite. Juego para Android.",
+      "screenshot_path": "/img/screenshots/game_rg.png",
+      "technologies": ["Unity", "C#"],
+      "url_github": "",
+      "url_deploy": "",
+      "url_playstore": "https://play.google.com/store/apps/details?id=com.ducktracio.ricochetgirls"
     }
   ]
 }

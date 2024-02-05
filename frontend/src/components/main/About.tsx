@@ -21,7 +21,7 @@ export default async function About() {
   return (
     <>
       <div className="mx-2 md:mx-20 my-6">
-        <Window title="New file">
+        <Window title="New file" className="">
           <div className="m-2">
             <div className="text-2xl flex text-custom-brown-5">
               <h4>Hola, soy</h4>

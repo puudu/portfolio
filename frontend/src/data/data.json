@@ -27,6 +27,18 @@
       "image_path": "/img/technologies/django.webp"
     },
     {
+      "name": "NodeJS",
+      "image_path": "/img/technologies/node-js.svg"
+    },
+    {
+      "name": "express",
+      "image_path": "/img/technologies/express-js.png"
+    },
+    {
+      "name": ".NET",
+      "image_path": "/img/technologies/dot-net.png"
+    },
+    {
       "name": "ReactJS",
       "image_path": "/img/technologies/react.png"
     },
@@ -61,10 +73,25 @@
   ],
   "projects": [
     {
+      "title": "Busca servicios App",
+      "description": "Aplicación web diseñada para conectar usuarios que buscan y ofrecen servicios, permitiendo a los usuarios publicar y encontrar una amplia variedad de servicios. Incluye un sistema ",
+      "screenshot_path": "/img/screenshots/busca-servicios.png",
+      "technologies": [
+        "TypeScript",
+        "NodeJS",
+        "express",
+        "MongoDB",
+        "Tailwind"
+      ],
+      "url_github": "https://github.com/puudu/busca-servicios",
+      "url_deploy": "",
+      "url_playstore": ""
+    },
+    {
       "title": "Wallpapers App",
       "description": "Aplicación web diseñada para descargar y compartir fondos de pantalla. Explora una amplia variedad de fondos de pantalla con listas paginadas, utilizando diversos filtros, categorías, tipos de pantalla y opciones de orden. Los usuarios pueden crear una cuenta con tal de enviar sus aportes, los nuevos aportes deben ser aprobados por un administrador del sitio.",
       "screenshot_path": "/img/screenshots/wallpapers.png",
-      "technologies": ["Javascript", "Python", "Django", "MySQL", "Tailwind"],
+      "technologies": ["JavaScript", "Python", "Django", "MySQL", "Tailwind"],
       "url_github": "https://github.com/puudu/django-wallpapers",
       "url_deploy": "",
       "url_playstore": ""
